@@ -1,4 +1,5 @@
 #include <gui/BufferQueue.h>
+#include <gui/BufferQueueConsumer.h>
 
 extern "C" {
   

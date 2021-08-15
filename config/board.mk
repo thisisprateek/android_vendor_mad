@@ -44,7 +44,7 @@ BOARD_HAVE_BLUETOOTH := true
 BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 
 # Recovery
-RECOVERY_VARIANT := twrp
+#RECOVERY_VARIANT := twrp
 
 # TWRP
 ifeq ($(RECOVERY_VARIANT), twrp)
@@ -75,7 +75,7 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 endif
 
 # SELinux
-BOARD_SEPOLICY_DIRS := \
+#BOARD_SEPOLICY_DIRS := \
     vendor/mad/sepolicy
 
 # DEXPREOPT
