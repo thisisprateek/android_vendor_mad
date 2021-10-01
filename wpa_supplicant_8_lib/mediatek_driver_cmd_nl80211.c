@@ -186,7 +186,7 @@ int wpa_driver_nl80211_driver_cmd(void *priv, char *cmd, char *buf,
             wpa_msg(drv->ctx, MSG_INFO, "CTRL-EVENT-DRIVER-STATE STOPPED");
         }
     } else if (os_strncasecmp(cmd, "getpower", 8) == 0) {
-        u32 mode;
+        u32 mode =0;
         // ret = wpa_driver_wext_driver_get_power(drv, &mode);
         if (ret == 0) {
             ret = snprintf(buf, buf_len, "powermode = %u\n", mode);
@@ -195,7 +195,7 @@ int wpa_driver_nl80211_driver_cmd(void *priv, char *cmd, char *buf,
                 return ret;
         }
     } else if (os_strncasecmp(cmd, "get-rts-threshold", 17) == 0) {
-        u32 thd;
+        u32 thd = 0;
         // ret = wpa_driver_wext_driver_get_rts(drv, &thd);
         if (ret == 0) {
             ret = snprintf(buf, buf_len, "rts-threshold = %u\n", thd);
